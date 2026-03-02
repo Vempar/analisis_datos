@@ -5,7 +5,7 @@ from dash import Dash, html, dcc, callback, Output, Input
 import dash_ag_grid as dag
 import plotly.express as px
 
-dc= pd.read_excel("datasets/datos_aleatorios.xlsx")
+dc= pd.read_excel("scr/datasets/datos_aleatorios.xlsx")
 
 app=Dash("primer dash")
 app.layout = [

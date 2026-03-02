@@ -46,20 +46,20 @@ def crear_dataset():
     if not os.path.exists("datasets"):
         os.makedirs("datasets")
     
-    if os.path.exists("datasets/datos_aleatorios.json"):
-        os.rename("datasets/datos_aleatorios.json", "datasets/datos_aleatorios_"+str(Complemento_archivo)+".json")
+    if os.path.exists("scr/datasets/datos_aleatorios.json"):
+        os.rename("scr/datasets/datos_aleatorios.json", "scr/datasets/datos_aleatorios_"+str(Complemento_archivo)+".json")
 #crea el aarchivo en el directorio datasets y lo llama con la variable Nomre_archivo y el complemento archivo
-    if os.path.exists("datasets/"+Nomre_archivo+".csv"):
-        os.rename("datasets/"+Nomre_archivo+".csv", "datasets/"+Nomre_archivo+"_"+str(Complemento_archivo)+".csv")
-    if os.path.exists("datasets/"+Nomre_archivo+".xlsx"):
-        os.rename("datasets/"+Nomre_archivo+".xlsx", "datasets/"+Nomre_archivo+"_"+str(Complemento_archivo)+".xlsx")
+    if os.path.exists("scr/datasets/"+Nomre_archivo+".csv"):
+        os.rename("scr/datasets/"+Nomre_archivo+".csv", "scr/datasets/"+Nomre_archivo+"_"+str(Complemento_archivo)+".csv")
+    if os.path.exists("scr/datasets/"+Nomre_archivo+".xlsx"):
+        os.rename("scr/datasets/"+Nomre_archivo+".xlsx", "scr/datasets/"+Nomre_archivo+"_"+str(Complemento_archivo)+".xlsx")
     
     #crea un json con los datos de df y lo guarde en el directorio datasets y si no exixte datasets lo crea y si existe el archivo lo sobrescribe
-    df.to_json("datasets/datos_aleatorios.json", index=False)
+    df.to_json("scr/datasets/datos_aleatorios.json", index=False)
     #crea un csv con los datos de df y lo guarde en el directorio datasets y si no exixte datasets lo crea y si existe el archivo le cambia el nombre agregandole un numero al final
-    df.to_csv("datasets/datos_aleatorios.csv", index=False)
+    df.to_csv("scr/datasets/datos_aleatorios.csv", index=False)
     #crea un excel con los datos de df y lo guarde en el directorio datasets y si no exixte datasets lo crea y si existe el archivo le cambia el nombre agregandole una letra al final
-    df.to_excel("datasets/datos_aleatorios.xlsx", index=False)
+    df.to_excel("scr/datasets/datos_aleatorios.xlsx", index=False)
     #ejecuta la funcion crear_dataset
 crear_dataset()
 
