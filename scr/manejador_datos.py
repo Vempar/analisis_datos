@@ -58,3 +58,6 @@ Final = ((dc["Recorrido"] == "17/53") & (dc["Averia"] == "si")).value_counts()
 print(Final)
 
 print (((dc["Recorrido"] == "17/53") & (dc["Averia"] == "si")).sum())
+
+#ordenar el dataframe por recorrido y averia
+print(dc.sort_values(["Recorrido", "Averia"], ascending=[True, False]))

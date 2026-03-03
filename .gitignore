@@ -1,2 +1,3 @@
 .venv/
 /scr/cheatsheets/
+/scr/__pycache__/
